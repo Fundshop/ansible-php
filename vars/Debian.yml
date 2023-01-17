@@ -17,6 +17,8 @@ __php_extension_conf_paths:
   - "{{ __php_conf_path }}/fpm/conf.d"
 __php_fpm_daemon: php{{php_version_to_install}}-fpm
 
+
+php_opcache_enable_cli: "1"
 php_apc_conf_filename: 20-apc.ini
-php_opcache_conf_filename: 05-opcache.ini
+php_opcache_conf_filename: 10-opcache.ini
 php_aws_memcached_conf_filename: 30-aws-memcached.ini

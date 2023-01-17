@@ -53,22 +53,6 @@
     - restart php-fpm
   when: php_use_managed_ini and php_enable_php_fpm
 
-
-- name: Place APC configuration file in place.
-  template:
-    src: apc.ini.j2
-    dest: "{{ item }}/{{ php_apc_conf_filename }}"
-    owner: root
-    group: root
-    force: yes
-    mode: 0644
-  when: php_enable_apc
-  notify:
-    - restart webserver
-    - restart php-fpm
-  with_items: "{{ php_extension_conf_paths }}"
-
-
 - name: Place OpCache configuration file in place.
   template:
     src: opcache.ini.j2

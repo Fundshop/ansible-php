@@ -4,6 +4,8 @@ zend_extension=opcache.so
 {% endif %}
 
 opcache.enable={{ php_opcache_enable }}
+opcache.jit=tracing
+opcache.jit_buffer_size=100M
 opcache.enable_cli={{ php_opcache_enable_cli }}
 opcache.memory_consumption={{ php_opcache_memory_consumption }}
 opcache.interned_strings_buffer={{ php_opcache_interned_strings_buffer }}
