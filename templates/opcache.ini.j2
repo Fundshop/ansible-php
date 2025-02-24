@@ -15,8 +15,5 @@ opcache.validate_timestamps={{ php_opcache_validate_timestamps|default(0) }}
 opcache.revalidate_freq={{ php_opcache_revalidate_freq }}
 opcache.max_file_size={{ php_opcache_max_file_size }}
 
-#Not possible to implement because of the 2 applications (Intencial <=> MB)
-#opcache.preload=preload.php
-#opcache.preload_user=www-data
 
 opcache.enable_file_override={{ php_opcache_enable_file_override|default(1) }}
