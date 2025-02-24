@@ -9,8 +9,14 @@ opcache.jit_buffer_size=100M
 opcache.enable_cli={{ php_opcache_enable_cli }}
 opcache.memory_consumption={{ php_opcache_memory_consumption }}
 opcache.interned_strings_buffer={{ php_opcache_interned_strings_buffer }}
-opcache.max_accelerated_files={{ php_opcache_max_accelerated_files }}
+opcache.max_accelerated_files={{ php_opcache_max_accelerated_files|default(10000) }}
 opcache.max_wasted_percentage={{ php_opcache_max_wasted_percentage }}
-opcache.validate_timestamps={{ php_opcache_validate_timestamps }}
+opcache.validate_timestamps={{ php_opcache_validate_timestamps|default(0) }}
 opcache.revalidate_freq={{ php_opcache_revalidate_freq }}
 opcache.max_file_size={{ php_opcache_max_file_size }}
+
+#Not possible to implement because of the 2 applications (Intencial <=> MB)
+#opcache.preload=preload.php
+#opcache.preload_user=www-data
+
+opcache.enable_file_override={{ php_opcache_enable_file_override|default(1) }}

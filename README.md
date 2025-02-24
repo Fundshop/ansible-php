@@ -62,7 +62,7 @@ By default, all the extra defaults below are applied through the php.ini include
     php_upload_max_filesize: "64M"
     php_post_max_size: "32M"
     php_auto_prepend_file: ""
-    php_date_timezone: "America/Chicago"
+    php_date_timezone: "Europe/Paris"
     php_sendmail_path: "/usr/sbin/sendmail -t -i"
     php_short_open_tag: false
     php_disable_functions: ""
