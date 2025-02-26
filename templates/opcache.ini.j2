@@ -6,13 +6,13 @@ zend_extension=opcache.so
 opcache.enable={{ php_opcache_enable }}
 opcache.jit=tracing
 opcache.jit_buffer_size=100M
-opcache.enable_cli={{ php_opcache_enable_cli }}
-opcache.memory_consumption={{ php_opcache_memory_consumption }}
-opcache.interned_strings_buffer={{ php_opcache_interned_strings_buffer }}
-opcache.max_accelerated_files={{ php_opcache_max_accelerated_files|default(10000) }}
-opcache.max_wasted_percentage={{ php_opcache_max_wasted_percentage }}
+opcache.enable_cli=0
+opcache.memory_consumption={{ php_opcache_memory_consumption|default(256) }}
+opcache.interned_strings_buffer={{ php_opcache_interned_strings_buffer|default(64) }}
+opcache.max_accelerated_files={{ php_opcache_max_accelerated_files|default(20000) }}
+opcache.max_wasted_percentage={{ php_opcache_max_wasted_percentage|default(5) }}
 opcache.validate_timestamps={{ php_opcache_validate_timestamps|default(0) }}
-opcache.revalidate_freq={{ php_opcache_revalidate_freq }}
+opcache.revalidate_freq={{ php_opcache_revalidate_freq|default(0) }}
 opcache.max_file_size={{ php_opcache_max_file_size }}
 
 

@@ -23,12 +23,12 @@ php_executable: "php"
 # OpCache settings (useful for PHP >=5.5).
 php_opcache_enabled_in_ini: true
 php_opcache_enable: 1
-php_opcache_enable_cli: 1
+php_opcache_enable_cli: 0
 php_opcache_memory_consumption: 256
 php_opcache_enable_file_override: 1
-php_opcache_interned_strings_buffer: 16
-php_opcache_max_accelerated_files: 10000
-php_opcache_max_wasted_percentage: "5"
+php_opcache_interned_strings_buffer: 64
+php_opcache_max_accelerated_files: 20000
+php_opcache_max_wasted_percentage: 5
 php_opcache_validate_timestamps: 0
 php_opcache_revalidate_freq: "2"
 php_opcache_max_file_size: "0"
@@ -50,7 +50,7 @@ php_debian_pkg_name: ""
 php_use_managed_ini: true
 
 php_expose_php: "Off"
-php_memory_limit: "256M"
+php_memory_limit: -1
 php_max_execution_time: "60"
 php_max_input_time: "60"
 php_max_input_vars: "1000"
